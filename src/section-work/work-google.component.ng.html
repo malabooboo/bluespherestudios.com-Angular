@@ -1,0 +1,28 @@
+<div class="work-bundle-content">
+  <p class="intro">Currently, as part of Google's Brand Studio and Cloud teams, I have worked on many different marketing websites and initiatives across the company and many different products.</p>
+  <div class="gallery">
+    <div class="images">
+      <img class="content-height" (load)="onImageLoad()" src="/assets/images/google-earth-national-treasures.jpg">
+      <div (click)="cycleImage($event)" class="carousel" #carousel>
+        <img [ngClass]="{'current': currentImage==1}" class="carousel-image" data-position="1" src="/assets/images/google-earth-national-treasures.jpg">
+        <img [ngClass]="{'current': currentImage==2}" class="carousel-image" data-position="2" src="/assets/images/google-earth-mission-blue-01.jpg">
+        <img [ngClass]="{'current': currentImage==3}" class="carousel-image" data-position="3" src="/assets/images/google-earth-mission-blue-02.jpg">
+      </div>
+      <div class="image-nav">
+        <img (click)="setCurrentImage(1)" [ngClass]="{'current': currentImage==1}" class="carousel-thumb" data-position="1" src="/assets/images/google-earth-national-treasures.jpg">
+        <img (click)="setCurrentImage(2)" [ngClass]="{'current': currentImage==2}" class="carousel-thumb" data-position="2" src="/assets/images/google-earth-mission-blue-01.jpg">
+        <img (click)="setCurrentImage(3)" [ngClass]="{'current': currentImage==3}" class="carousel-thumb" data-position="3" src="/assets/images/google-earth-mission-blue-02.jpg">
+      </div>
+    </div>
+    <div class="info">
+      <h3>Google Earth</h3>
+      <p>I was involved in building the front end platform for the new Google Earth's key content feature, Voyager, launched in 2017.</p>
+
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://earth.google.com/web">Google Earth</a></li>
+        <li><a href="#">Launch announcement</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

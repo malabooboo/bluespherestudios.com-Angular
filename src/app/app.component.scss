@@ -1,0 +1,35 @@
+@import '../shared/scss/vars';
+@import '../shared/scss/mixins';
+@import '../shared/scss/base';
+
+:host {
+  display: block;
+}
+
+section {
+  padding: $section-padding;
+
+  h2 {
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+  }
+}
+
+// Top level sections
+
+.hero {
+  padding: 130px 60px 60px;
+  background-color: #20242D;
+  text-align: center;
+}
+
+.section-about {
+  position: relative;
+  padding-bottom: 140px;
+  background: $color-gray;
+}
+
+.section-contact {
+  background-color: $color-dark-gray;
+  color: $color-white;
+}

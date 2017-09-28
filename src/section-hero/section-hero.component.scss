@@ -1,0 +1,16 @@
+@import '../shared/scss/vars';
+
+:host {
+  display: block;
+}
+
+h1 {
+  margin-bottom: 0;
+  color: rgba($color-white, .8);
+  font-weight: 300;
+  font-size: 32px;
+
+  strong, span {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="site-width work-container" [ngStyle]="{'height.px': currentContentHeight + 40}">
+  <h2>Work</h2>
+  <nav>
+    <ul class="work-nav">
+      <li><a href="#" #currentOnLoad (click)="setCurrentContent('Google', $event)" [ngClass]="{'active': isCurrentContent('Google')}">Google</a></li>
+      <li><a href="#" (click)="setCurrentContent('FileMaker', $event)" [ngClass]="{'active': isCurrentContent('FileMaker')}">FileMaker</a></li>
+      <li><a href="#" (click)="setCurrentContent('McAfee',  $event)" [ngClass]="{'active': isCurrentContent('McAfee')}">McAfee</a></li>
+      <li><a href="#" (click)="setCurrentContent('Cityteam', $event)" [ngClass]="{'cactive': isCurrentContent('Cityteam')}">Cityteam</a></li>
+    </ul>
+  </nav>
+
+  <work-google *ngIf="isCurrentContent('Google')"
+               [@fadeInOut]="isCurrentContent('Google')"
+               [ngClass]="{'current-content': isCurrentContent('Google')}"
+               #workGoogle
+               class="work-bundle">
+  </work-google>
+  <work-filemaker *ngIf="isCurrentContent('FileMaker')"
+                  [@fadeInOut]="isCurrentContent('FileMaker')"
+                  [ngClass]="{'current-content': isCurrentContent('FileMaker')}"
+                  #workFileMaker
+                  class="work-bundle">
+  </work-filemaker>
+  <work-mcafee *ngIf="isCurrentContent('McAfee')"
+               [@fadeInOut]="isCurrentContent('McAfee')"
+               [ngClass]="{'current-content': isCurrentContent('McAfee')}"
+               #workMcAfee
+               class="work-bundle">
+  </work-mcafee>
+  <work-cityteam *ngIf="isCurrentContent('Cityteam')"
+                 [@fadeInOut]="isCurrentContent('Cityteam')"
+                 [ngClass]="{'current-content': isCurrentContent('Cityteam')}"
+                 #workCityteam
+                 class="work-bundle">
+  </work-cityteam>
+</div>

@@ -1,0 +1,25 @@
+@import '../shared/scss/vars';
+
+:host {
+  display: block;
+}
+
+.photo {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 40%;
+  opacity: 1;
+}
+
+p {
+  position: relative;
+  z-index: 2;
+  margin-left: 40%;
+  font-size: 18px;
+}
+
+p.intro {
+  color: rgba($color-black, .8);
+  font-size: 32px;
+}

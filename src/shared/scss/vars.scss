@@ -1,0 +1,20 @@
+$color-white: #fff;
+$color-black: #000;
+$color-blue-primary: #4285f4;
+$color-blue-accent: #0d3479;
+$color-gray: #c0c5cc;
+$color-dark-gray: #20242D;
+
+$color-link: #245dc1;
+$color-link-hover: #5587d7;
+$color-link-visited: #245dc1; // #7d4fe4;
+$color-link-active: #245dc1;
+
+$font-headings: 'Ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-body: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+@mixin font-base {
+  font: 300 16px / 1.6 $font-body;
+}
+
+$section-padding: 60px;

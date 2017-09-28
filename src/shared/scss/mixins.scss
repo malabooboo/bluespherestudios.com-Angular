@@ -1,0 +1,72 @@
+@mixin site-width {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+
+  @include desktop {
+    padding: 0;
+    width: 1000px;
+  }
+}
+
+@mixin primary-gradient {
+  background: #24C6DC;
+  background: -webkit-linear-gradient(to left, #514A9D, #24C6DC);
+  background: linear-gradient(to left, #514A9D, #24C6DC);
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin vertical-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin font-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($args...) {
+  -webkit-animation: $args;
+  animation: $args;
+}
+
+// Fade in animation for when a section comes into the viewport
+
+@mixin element-appear-resting {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@mixin element-appear-in($delay: 0s) {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .5s linear $delay, transform .5s ease-out $delay;
+}

@@ -1,0 +1,33 @@
+@import '../shared/scss/vars';
+
+.work-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: -56px 0 40px;
+
+  a {
+    border-radius: 3px;
+    margin: 0 5px;
+    padding: 14px;
+    text-decoration: none;
+
+    background: rgba(52, 109, 204, 0);
+    transition: background .3s;
+  }
+
+  a:hover {
+    background: rgba($color-gray, .4);
+    transition: background .3s;
+  }
+
+  a.active,
+  a.active:hover {
+    color: $color-white;
+    background: rgba(52, 109, 204, 1);
+  }
+}
+
+.work-container {
+  transition: height .3s;
+}

@@ -1,0 +1,9 @@
+@import '../shared/scss/vars';
+
+:host {
+  display: block;
+}
+
+h2 {
+  color: $color-white;
+}
