@@ -3,7 +3,7 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/
 import {WorkHeightService} from './work-height.service';
 
 
-const CAROUSEL_IMAGES = '.carousel';
+const CAROUSEL_IMAGES = '.carousel-image';
 
 /**
  * Component for a year of work in the portfolio section.
@@ -29,7 +29,9 @@ export class GoogleComponent implements AfterViewInit {
         this.carousel.nativeElement.querySelectorAll(CAROUSEL_IMAGES).length;
   }
 
-  // Sets the height of the container div after the first image has loaded.
+  /**
+   * Sets the height of the container div after the first image has loaded.
+   */
   onImageLoad() {
     const contentHeight = this.el.nativeElement.offsetHeight;
     this.workHeightService.setHeight(contentHeight);
@@ -39,7 +41,6 @@ export class GoogleComponent implements AfterViewInit {
    * Cycles through the image carousel when the image itself is clicked.
    */
   cycleImage(event: Event) {
-    console.log(event.target);
     const imgEl = <Element>event.target;
     let thisImage = +imgEl.getAttribute('data-position');
 

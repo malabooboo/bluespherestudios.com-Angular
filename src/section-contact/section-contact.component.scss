@@ -4,6 +4,21 @@
   display: block;
 }
 
-h2 {
+h1, h2, h3, h4, h5, p, a {
   color: $color-white;
+}
+
+.link-icon,
+.link-icon svg {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
+.link-github svg {
+  transform: scale(.9);
+}
+
+.link-linkedin svg {
+  transform: scale(1.1);
 }

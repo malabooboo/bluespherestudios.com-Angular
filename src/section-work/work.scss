@@ -20,6 +20,14 @@
   margin-bottom: 40px;
 }
 
+.work-logo {
+  display: block;
+  margin: 20px auto 10px;
+  width: auto;
+  height: 40px;
+  text-align: center;
+}
+
 .gallery {
   display: flex;
 }
@@ -39,7 +47,7 @@
 .info {
   flex-basis: 40%;
   margin: 0 auto;
-  margin-left: 20px;
+  margin-left: 40px;
   text-align: left;
 
   h4 {
@@ -64,6 +72,8 @@
     z-index: 1;
     visibility: hidden;
     width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 20px #ccc;
     opacity: 0;
     cursor: pointer;
     transition: opacity .5s, visibility .5s;
@@ -77,12 +87,25 @@
   }
 }
 
-.carousel-thumb {
-  width: 100px;
-  opacity: .5;
-  cursor: pointer;
+.image-nav {
+  margin-top: 10px;
+}
 
-  &.current {
+.carousel-thumb {
+  display: inline-block;
+  width: 100px;
+  opacity: .8;
+  cursor: pointer;
+  transition: opacity .3s;
+
+  &:hover {
     opacity: 1;
+    transition: opacity .3s;
+  }
+
+  &.current, 
+  &.current:hover {
+    opacity: .2;
+    transition: opacity .3s;
   }
 }

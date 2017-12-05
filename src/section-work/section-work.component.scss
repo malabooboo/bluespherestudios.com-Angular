@@ -1,18 +1,21 @@
 @import '../shared/scss/vars';
 
+:host {
+  display: block;
+}
+
 .work-nav {
   display: flex;
   justify-content: center;
-  list-style: none;
   margin: -56px 0 40px;
+  list-style: none;
 
   a {
-    border-radius: 3px;
     margin: 0 5px;
     padding: 14px;
-    text-decoration: none;
-
+    border-radius: 3px;
     background: rgba(52, 109, 204, 0);
+    text-decoration: none;
     transition: background .3s;
   }
 
@@ -23,8 +26,8 @@
 
   a.active,
   a.active:hover {
-    color: $color-white;
     background: rgba(52, 109, 204, 1);
+    color: $color-white;
   }
 }
 
