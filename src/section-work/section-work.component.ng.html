@@ -12,27 +12,33 @@
     <p class="intro">I have been fortunate enough to have been part of three different teams in two countries during my time with Google.  As part of the Cloud and Brand Studio teams, I have worked on many different marketing websites and initiatives across the company and many different products.</p>
     <div class="carousel-content">
       <ul class="recent-work">
-        <li><a href="#">Google Earth</a></li>
-        <li><a href="#">Qibla Finder</a></li>
-        <li><a href="#">Petra Treks and Petra VR</a></li>
-        <li><a href="#">Google Inbox</a></li>
+        <li><a (click)="setWork('google-earth')" [ngClass]="{'active': currentWork == 'google-earth'}">Google Earth</a></li>
+        <li><a (click)="setWork('qibla-finder')" [ngClass]="{'active': currentWork == 'qibla-finder'}">Qibla Finder</a></li>
+        <li><a (click)="setWork('petra')" [ngClass]="{'active': currentWork == 'petra'}">Petra Treks and Petra VR</a></li>
+        <li><a (click)="setWork('google-inbox')" [ngClass]="{'active': currentWork == 'google-inbox'}">Google Inbox</a></li>
       </ul>
       <div class="carousel">
-        <div class="carousel__slide">
-          <img src="/assets/images/google-earth-national-treasures.jpg">
+        <work-carousel [hidden]="currentWork != 'google-earth'" [@fadeAnimation]></work-carousel>
+        <work-carousel-qibla-finder [hidden]="currentWork != 'qibla-finder'" [@fadeAnimation]></work-carousel-qibla-finder>
+        <work-carousel-petra [hidden]="currentWork != 'petra'" [@fadeAnimation]></work-carousel-petra>
+        <work-carousel-inbox [hidden]="currentWork != 'google-inbox'" [@fadeAnimation]></work-carousel-inbox>
+      </div>
+      <div class="secondary-content secondary-content--heading">
+        <h2>Past work</h2>
+      </div>
+      <div class="secondary-content secondary-content--content">
+        <div class="secondary-content__work">
+          <h3>FileMaker</h3>
+          <img src="/assets/images/filemaker-homepage.jpg">
         </div>
-      </div>
-      <div class="secondary-content__leading">
-        <h3>FileMaker</h3>
-        <img src="/assets/images/filemaker-homepage.jpg">
-      </div>
-      <div class="secondary-content__trailing">
-        <h3>McAfee</h3>
-        <img src="/assets/images/mcafee-homepage.jpg">
-      </div>
-      <div class="secondary-content__last">
-        <h3>Cityteam</h3>
-        <img src="/assets/images/cityteam-international.jpg">
+        <div class="secondary-content__work">
+          <h3>McAfee</h3>
+          <img src="/assets/images/mcafee-homepage.jpg">
+        </div>
+        <div class="secondary-content__work">
+          <h3>Cityteam</h3>
+          <img src="/assets/images/cityteam-international.jpg">
+        </div>
       </div>
     </div>
     <!-- /Google -->

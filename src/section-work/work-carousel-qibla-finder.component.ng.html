@@ -1,0 +1,24 @@
+<div class="carousel__slides">
+  <figure class="carousel__slide slide-1" [ngClass]="{'active': getCurrentSlide() == 1}">
+    <img src="/assets/images/google-qibla-finder-01.jpg">
+  <figcaption>Qibla Finder</figcaption>
+  </figure>
+  <figure class="carousel__slide slide-2" [ngClass]="{'active': getCurrentSlide() == 2}">
+    <img src="/assets/images/google-qibla-finder-02.jpg">
+    <figcaption>Qibla Finder</figcaption>
+  </figure>
+</div>
+<nav class="carousel__controls">
+  <div class="carousel__controls--previous" (click)="setPreviousSlide()" [ngClass]="{'hidden': getCurrentSlide() == 1}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+      <path fill="none" d="M0 0h24v24H0V0z"/>
+    </svg>
+  </div>
+  <div class="carousel__controls--next" (click)="setNextSlide()" [ngClass]="{'hidden': getCurrentSlide() == getLastSlide()}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+      <path fill="none" d="M0 0h24v24H0V0z"/>
+    </svg>
+  </div>
+</nav>
