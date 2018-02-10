@@ -13,7 +13,7 @@ const VISUAL_OFFSET = 120;
 
 @Component({
   selector: 'app',
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.ng.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
