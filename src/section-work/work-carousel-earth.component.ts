@@ -6,10 +6,10 @@ import {Component, ElementRef, Input} from '@angular/core';
  */
 @Component({
   selector: 'work-carousel',
-  templateUrl: './work-carousel.component.ng.html',
+  templateUrl: './work-carousel-earth.component.ng.html',
   styleUrls: ['./work-carousel.component.scss'],
 })
-export class WorkCarouselComponent {
+export class WorkCarouselEarthComponent {
   currentSlide: number = 1;
   totalSlides: number = 3;
 

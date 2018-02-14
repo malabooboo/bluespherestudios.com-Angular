@@ -29,6 +29,5 @@ export class SectionWorkComponent {
 
   setWork(work: string) {
     this.currentWork = work;
-    console.log('current', this.currentWork);
   }
 }

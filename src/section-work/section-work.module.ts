@@ -5,11 +5,11 @@ import {SectionWorkComponent} from '../section-work/section-work.component';
 import {WorkCarouselInboxComponent} from '../section-work/work-carousel-inbox.component';
 import {WorkCarouselPetraComponent} from '../section-work/work-carousel-petra.component';
 import {WorkCarouselQiblaFinderComponent} from '../section-work/work-carousel-qibla-finder.component';
-import {WorkCarouselComponent} from '../section-work/work-carousel.component';
+import {WorkCarouselEarthComponent} from '../section-work/work-carousel-earth.component';
 
 @NgModule({
   declarations: [
-    SectionWorkComponent, WorkCarouselComponent,
+    SectionWorkComponent, WorkCarouselEarthComponent,
     WorkCarouselQiblaFinderComponent, WorkCarouselPetraComponent,
     WorkCarouselInboxComponent
   ],
