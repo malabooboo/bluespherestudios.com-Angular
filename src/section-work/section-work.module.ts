@@ -1,22 +1,21 @@
-import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import {SectionWorkComponent} from './section-work.component';
-import {GoogleComponent} from './work-google.component';
-import {FileMakerComponent} from './work-filemaker.component';
-import {McAfeeComponent} from './work-mcafee.component';
-import {CityteamComponent} from './work-cityteam.component';
-
-import {WorkHeightService} from './work-height.service';
+import {SectionWorkComponent} from '../section-work/section-work.component';
+import {WorkCarouselInboxComponent} from '../section-work/work-carousel-inbox.component';
+import {WorkCarouselPetraComponent} from '../section-work/work-carousel-petra.component';
+import {WorkCarouselQiblaFinderComponent} from '../section-work/work-carousel-qibla-finder.component';
+import {WorkCarouselEarthComponent} from '../section-work/work-carousel-earth.component';
 
 @NgModule({
   declarations: [
-    SectionWorkComponent, GoogleComponent, FileMakerComponent, McAfeeComponent,
-    CityteamComponent
+    SectionWorkComponent,
+    WorkCarouselEarthComponent,
+    WorkCarouselQiblaFinderComponent,
+    WorkCarouselPetraComponent,
+    WorkCarouselInboxComponent
   ],
-  imports: [CommonModule],
-  exports: [SectionWorkComponent],
-  providers: [WorkHeightService],
+  imports: [BrowserModule],
+  exports: [SectionWorkComponent]
 })
-export class SectionWorkModule {
-}
+export class SectionWorkModule {}
