@@ -1,4 +1,5 @@
 @import '../shared/scss/vars';
+@import '../shared/scss/mixins';
 
 :host {
   display: block;
@@ -8,19 +9,31 @@
   position: absolute;
   bottom: 0;
   z-index: 1;
-  max-width: 30%;
-  width: 40%;
+  max-width: 330px;
+  width: 60%;
   opacity: 1;
+
+  @include tablet {
+    max-width: 30%;
+    width: 40%;
+  }
 }
 
 p {
   position: relative;
   z-index: 2;
-  margin-left: 40%;
   font-size: 18px;
+
+  @include tablet {
+    margin-left: 40%;
+  }
 }
 
 p.intro {
   color: rgba($color-black, .8);
-  font-size: 32px;
+  font-size: 22px;
+
+  @include tablet {
+    font-size: 32px;
+  }
 }

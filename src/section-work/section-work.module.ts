@@ -9,8 +9,10 @@ import {WorkCarouselEarthComponent} from '../section-work/work-carousel-earth.co
 
 @NgModule({
   declarations: [
-    SectionWorkComponent, WorkCarouselEarthComponent,
-    WorkCarouselQiblaFinderComponent, WorkCarouselPetraComponent,
+    SectionWorkComponent,
+    WorkCarouselEarthComponent,
+    WorkCarouselQiblaFinderComponent,
+    WorkCarouselPetraComponent,
     WorkCarouselInboxComponent
   ],
   imports: [BrowserModule],

@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
-
 /**
- * Service that opens and closes modal windows.
+ * Service that keeps track of the current section.
  */
 @Injectable()
 export class SectionService {
