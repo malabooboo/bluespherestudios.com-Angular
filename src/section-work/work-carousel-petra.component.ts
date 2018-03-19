@@ -1,16 +1,16 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 /**
- * Component the work carousel.
+ * Work carousel component for Petra.
  */
 @Component({
   selector: 'work-carousel-petra',
-  templateUrl: './work-carousel-petra.component.ng.html',
+  templateUrl: './work-carousel-petra.component.html',
   styleUrls: ['./work-carousel.component.scss']
 })
 export class WorkCarouselPetraComponent {
   currentSlide = 1;
-  totalSlides = 2;
+  totalSlides = 5;
 
   getCurrentSlide() {
     return this.currentSlide;

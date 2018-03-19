@@ -5,33 +5,53 @@
   display: block;
 }
 
-.photo {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  max-width: 330px;
-  width: 60%;
-  opacity: 1;
+.site-width {
+  background: rgba($color-black, .8);
+  margin-right: 0;
+  padding: 20px 40px;
 
   @include tablet {
-    max-width: 30%;
-    width: 40%;
+    width: 50%;
+  }
+}
+
+h2 {
+  color: $color-white;
+
+  @include element-appear-resting;
+  :host.in-view & {
+    @include element-appear-in();
   }
 }
 
 p {
   position: relative;
   z-index: 2;
-  font-size: 18px;
+  color: $color-white;
+
+  @include element-appear-resting;
+  :host.in-view & {
+    @include element-appear-in(.9s);
+  }
 
   @include tablet {
-    margin-left: 40%;
+    font-size: 18px;
+  }
+
+  a {
+    color: $color-white;
   }
 }
 
 p.intro {
-  color: rgba($color-black, .8);
+  color: $color-white;
   font-size: 22px;
+  line-height: 1.2;
+
+  @include element-appear-resting;
+  :host.in-view & {
+    @include element-appear-in(.3s);
+  }
 
   @include tablet {
     font-size: 32px;

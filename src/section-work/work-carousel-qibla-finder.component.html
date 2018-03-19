@@ -1,0 +1,27 @@
+<div class="carousel__slides">
+  <figure class="carousel__slide slide-1" [ngClass]="{'active': getCurrentSlide() == 1}">
+    <img src="/assets/images/google-qibla-finder-01.jpg">
+  <figcaption>Qibla Finder was Google's Ramadan site for 2017, a complex web app which uses the user's location and compass to show them
+    the direction to Mecca, and 3D elements to provide an immersive experience. <a href="https://qiblafinder.withgoogle.com" target="_blank">See the site</a></figcaption>
+  </figure>
+  <figure class="carousel__slide slide-2" [ngClass]="{'active': getCurrentSlide() == 2}">
+    <img src="/assets/images/google-qibla-finder-03.jpg">
+    <figcaption>Tech used on the site included Angular, Three.js, geolocation, and Web Navigator APIs.</figcaption>
+  </figure>
+  <figure class="carousel__slide slide-3" [ngClass]="{'active': getCurrentSlide() == 3}">
+    <img src="/assets/images/google-qibla-finder-02.jpg">
+    <figcaption>Qibla Finder was well-received and has been kept live after Ramadan 2017 and actively developed since then.</figcaption>
+  </figure>
+</div>
+<nav class="carousel__controls">
+  <div class="carousel__controls--previous" (click)="setPreviousSlide()" [ngClass]="{'hidden': getCurrentSlide() == 1}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use>
+    </svg>
+  </div>
+  <div class="carousel__controls--next" (click)="setNextSlide()" [ngClass]="{'hidden': getCurrentSlide() == getLastSlide()}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+    </svg>
+  </div>
+</nav>

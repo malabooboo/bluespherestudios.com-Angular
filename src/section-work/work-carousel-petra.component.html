@@ -1,0 +1,41 @@
+<div class="carousel__slides">
+  <figure class="carousel__slide slide-1" [ngClass]="{'active': getCurrentSlide() == 1}">
+    <img src="/assets/images/google-petra-01.jpg">
+    <figcaption>
+      An immersive Treks experience for Petra in Jordan, famous for its temples and tombs. The site launched in 47 languages and
+      allowed users to rediscover the lost city with Google Street View technology, audio narration and rich imagery.
+      <a href="https://g.co/Petra">Visit the site</a>
+    </figcaption>
+  </figure>
+  <figure class="carousel__slide slide-2" [ngClass]="{'active': getCurrentSlide() == 2}">
+    <img src="/assets/images/google-petra-02.jpg">
+    <figcaption></figcaption>
+  </figure>
+  <figure class="carousel__slide slide-3" [ngClass]="{'active': getCurrentSlide() == 3}">
+    <img src="/assets/images/google-petra-04.jpg">
+    <figcaption>
+      Petra Cardboard VR built on the success of the Petra Treks site and allowed users to explore Petra in 3D Web VR with Google Cardboard.
+      <a href="https://g.co/PetraVR">Visit the site</a>
+    </figcaption>
+  </figure>
+  <figure class="carousel__slide slide-4" [ngClass]="{'active': getCurrentSlide() == 4}">
+    <img src="/assets/images/google-petra-03.jpg">
+    <figcaption></figcaption>
+  </figure>
+  <figure class="carousel__slide slide-5" [ngClass]="{'active': getCurrentSlide() == 5}">
+    <img src="/assets/images/google-petra-05.jpg">
+    <figcaption></figcaption>
+  </figure>
+</div>
+<nav class="carousel__controls">
+  <div class="carousel__controls--previous" (click)="setPreviousSlide()" [ngClass]="{'hidden': getCurrentSlide() == 1}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use>
+    </svg>
+  </div>
+  <div class="carousel__controls--next" (click)="setNextSlide()" [ngClass]="{'hidden': getCurrentSlide() == getLastSlide()}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+    </svg>
+  </div>
+</nav>

@@ -1,6 +1,6 @@
 <header class="header" [ngClass]="{'header--fixed': isFixed, 'header--normal': !isFixed, 'header--up': isScrollDirectionUp}">
   <div class="site-width">
-    <div class="logo">
+    <div class="logo" scrollTo scrollTargetSelector="#home">
       <logo></logo>
       <h1>Blue Sphere Studios</h1>
     </div>
@@ -9,7 +9,6 @@
         <li class="nav-item" [ngClass]="{'selected': currentNav == 'home'}"><span><a scrollTo href="#home" class="gnav-link active">Home</a></span></li>
         <li class="nav-item" [ngClass]="{'selected': currentNav == 'work'}"><span><a scrollTo href="#work" class="gnav-link">Work</a></span></li>
         <li class="nav-item" [ngClass]="{'selected': currentNav == 'about'}"><span><a scrollTo href="#about" class="gnav-link mobile-hidden">About</a></span></li>
-        <li class="nav-item" [ngClass]="{'selected': currentNav == 'contact'}"><span><a scrollTo href="#contact" class="gnav-link">Contact</a></span></li>
       </ul>
     </nav>
   </div>

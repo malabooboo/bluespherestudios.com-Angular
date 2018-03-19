@@ -8,6 +8,10 @@ body {
   // @include font-antialiased;
   @include font-base;
 
+  @include tablet {
+    font-size: 17px;
+  }
+
   &.scroll-locked {
     overflow: hidden;
     width: 100vw;
@@ -61,5 +65,13 @@ a {
   &[target="_blank"] {
     padding-right: 16px;
     background: url(/assets/icon-open-new-window.svg) no-repeat 100% 2px/12px 12px;
+  }
+}
+
+.mobile-hide {
+  display: none;
+
+  @include tablet {
+    display: inline;
   }
 }

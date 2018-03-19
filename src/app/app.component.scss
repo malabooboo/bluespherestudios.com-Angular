@@ -19,7 +19,7 @@ section {
 
 .hero {
   padding: 90px 20px 20px;
-  background-color: #20242D;
+  background-color: $color-dark-gray;
   text-align: center;
 
   @include tablet {
@@ -29,15 +29,20 @@ section {
 
 .section-about {
   position: relative;
-  padding-bottom: 340px;
-  background: $color-gray;
+  background: $color-gray url(/assets/images/IMG_8192.jpg) no-repeat 50% 50% / cover;
+  -webkit-filter: saturate(.4);
+  filter: saturate(.4);
+}
 
-  @include tablet {
-    padding-bottom: 140px;
-  }
+.section-work {
+  padding-bottom: 20px;
 }
 
 .section-contact {
   background-color: $color-dark-gray;
   color: $color-white;
+}
+
+.section-stats {
+  background-color: $color-gray;
 }

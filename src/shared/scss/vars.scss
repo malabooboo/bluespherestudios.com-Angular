@@ -14,5 +14,5 @@ $font-headings: 'Ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $font-body: 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 @mixin font-base {
-  font: 300 16px / 1.6 $font-body;
+  font: 300 15px / 1.6 $font-body;
 }

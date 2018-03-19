@@ -1,4 +1,5 @@
 @import '../shared/scss/vars';
+@import '../shared/scss/mixins';
 
 :host {
   display: block;
@@ -8,11 +9,35 @@ h1, h2, h3, h4, h5, p, a {
   color: $color-white;
 }
 
+h2 {
+  @include element-appear-resting;
+  :host.in-view & {
+    @include element-appear-in();
+  }
+}
+
+.elsewhere-links {
+  @include element-appear-resting;
+  :host.in-view & {
+    @include element-appear-in(.3s);
+  }
+}
+
 .link-icon,
 .link-icon svg {
   display: inline-block;
   width: 48px;
   height: 48px;
+}
+
+.link-icon {
+  opacity: .75;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity .3s;
+  }
 }
 
 .link-github svg {
@@ -21,4 +46,13 @@ h1, h2, h3, h4, h5, p, a {
 
 .link-linkedin svg {
   transform: scale(1.1);
+}
+
+p {
+  margin-top: 10px;
+
+  @include element-appear-resting;
+  :host.in-view & {
+    @include element-appear-in(.6s);
+  }
 }

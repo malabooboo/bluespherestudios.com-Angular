@@ -2,7 +2,13 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'site-footer',
-  templateUrl: './site-footer.component.html',
+  template: `
+  <footer>
+    <div class="site-width">
+      <p>Copyright &copy; 2002 - {{currentYear}} Blue Sphere Studios</p>
+    </div>
+  </footer>
+  `,
   styleUrls: ['./site-footer.component.scss']
 })
 export class SiteFooterComponent implements OnInit {

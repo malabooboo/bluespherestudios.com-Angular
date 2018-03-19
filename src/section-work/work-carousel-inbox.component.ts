@@ -1,11 +1,11 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 /**
- * Component the work carousel.
+ * Work carousel component for Inbox.
  */
 @Component({
   selector: 'work-carousel-inbox',
-  templateUrl: './work-carousel-inbox.component.ng.html',
+  templateUrl: './work-carousel-inbox.component.html',
   styleUrls: ['./work-carousel.component.scss']
 })
 export class WorkCarouselInboxComponent {

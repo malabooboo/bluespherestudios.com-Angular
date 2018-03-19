@@ -1,17 +1,16 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
-
 /**
- * Component the work carousel.
+ * Work carousel component for Qibla Finder.
  */
 @Component({
   selector: 'work-carousel-qibla-finder',
-  templateUrl: './work-carousel-qibla-finder.component.ng.html',
-  styleUrls: ['./work-carousel.component.scss'],
+  templateUrl: './work-carousel-qibla-finder.component.html',
+  styleUrls: ['./work-carousel.component.scss']
 })
 export class WorkCarouselQiblaFinderComponent {
-  currentSlide: number = 1;
-  totalSlides: number = 2;
+  currentSlide = 1;
+  totalSlides = 3;
 
   getCurrentSlide() {
     return this.currentSlide;

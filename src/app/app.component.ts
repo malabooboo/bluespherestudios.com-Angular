@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs/Subscription';
+import 'rxjs/add/observable/timer';
 
 import {SectionService} from '@services/section.service';
 
@@ -26,9 +27,14 @@ const VISUAL_OFFSET = 120;
 export class AppComponent implements OnInit {
   @ViewChild('homeSection') homeSection: ElementRef;
   @ViewChild('workSection') workSection: ElementRef;
+  @ViewChild('pastWorkSection') pastWorkSection: ElementRef;
+  @ViewChild('statsSection') statsSection: ElementRef;
   @ViewChild('aboutSection') aboutSection: ElementRef;
   @ViewChild('contactSection') contactSection: ElementRef;
-  windowHeight: number;
+  isPastWorkInView: string;
+  isStatsInView: string;
+  isAboutInView: string;
+  isContactInView: string;
   siteSections: String[];
   currentSection: string;
   sectionServiceSubscription: Subscription;
@@ -39,8 +45,45 @@ export class AppComponent implements OnInit {
   // current section.
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Various height values
     const scrollPosition = document.documentElement.scrollTop + VISUAL_OFFSET;
+
+    this.setCurrentSection(scrollPosition);
+
+    this.triggerBuildIn(scrollPosition);
+  }
+
+  /**
+   * Triggers a fade-in transition for content as the user scrolls down.
+   */
+  triggerBuildIn(scrollPosition: number) {
+    const viewportHeight = document.documentElement.clientHeight;
+    const adjustedPosition =
+      scrollPosition + viewportHeight - viewportHeight / 2;
+
+    // TODO(tmalabuyo): refactor this.
+    // These can't be simple booleans switches:
+    //     this.sectionInView = scrollPosition > this.section.offsetTop;
+    // ...since I only want to get the first change.
+    if (adjustedPosition > this.pastWorkSection.nativeElement.offsetTop) {
+      this.isPastWorkInView = 'seen';
+    }
+
+    if (adjustedPosition > this.statsSection.nativeElement.offsetTop) {
+      this.isStatsInView = 'seen';
+    }
+
+    if (adjustedPosition > this.aboutSection.nativeElement.offsetTop) {
+      this.isAboutInView = 'seen';
+
+      // Set contact in view as well, since it's so near the bottom,
+      // it never reaches the adjustedPosition
+      const timer = Observable.timer(500);
+      const sub = timer.subscribe(() => this.isContactInView = 'seen');
+    }
+  }
+
+  setCurrentSection(scrollPosition: number) {
+    // Various height values
     const documentHeight = document.documentElement.scrollHeight;
     const viewportHeight = document.documentElement.clientHeight;
     const scrollEndPosition = documentHeight - viewportHeight;

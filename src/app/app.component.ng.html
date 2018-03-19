@@ -6,11 +6,17 @@
   <section class="section-work" id="work" #workSection>
     <section-work></section-work>
   </section>
+  <section class="section-past-work" id="past-work" #pastWorkSection>
+    <section-past-work [ngClass]="{'in-view': isPastWorkInView == 'seen'}"></section-past-work>
+  </section>
+  <section class="section-stats" id="stats" #statsSection>
+    <section-stats [ngClass]="{'in-view': isStatsInView == 'seen'}"></section-stats>
+  </section>
   <section class="section-about" id="about" #aboutSection>
-    <section-about></section-about>
+    <section-about [ngClass]="{'in-view': isAboutInView == 'seen'}"></section-about>
   </section>
   <section class="section-contact" id="contact" #contactSection>
-    <section-contact></section-contact>
+    <section-contact [ngClass]="{'in-view': isContactInView == 'seen'}"></section-contact>
   </section>
   <site-footer></site-footer>
   <svg-assets></svg-assets>

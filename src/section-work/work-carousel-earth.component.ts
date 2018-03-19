@@ -1,16 +1,16 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 /**
- * Component the work carousel.
+ * Work carousel component for Google Earth.
  */
 @Component({
   selector: 'work-carousel',
-  templateUrl: './work-carousel-earth.component.ng.html',
+  templateUrl: './work-carousel-earth.component.html',
   styleUrls: ['./work-carousel.component.scss']
 })
 export class WorkCarouselEarthComponent {
   currentSlide = 1;
-  totalSlides = 3;
+  totalSlides = 4;
 
   getCurrentSlide() {
     return this.currentSlide;

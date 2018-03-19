@@ -27,6 +27,7 @@ export class SiteHeaderComponent implements OnInit, AfterViewInit {
   /** The last scroll position before the next scroll event. */
   lastScrollPosition: number;
 
+  /** The current section that the user is scrolled to. */
   currentNav: string;
 
   sectionServiceSubscription: Subscription;

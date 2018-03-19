@@ -7,7 +7,9 @@ import {SectionAboutComponent} from '../section-about/section-about.component';
 import {SectionContactComponent} from '../section-contact/section-contact.component';
 import {SectionHeroComponent} from '../section-hero/section-hero.component';
 import {SectionWorkModule} from '../section-work/section-work.module';
+import {SectionPastWorkComponent} from 'section-past-work/section-past-work.component';
 import {SectionService} from '@services/section.service';
+import {SectionStatsComponent} from 'section-stats/section-stats.component';
 import {WindowRef} from '@services/window-ref.service';
 import {LogoComponent} from '@shared/logo/logo.component';
 import {SvgAssetsComponent} from '@shared/svg-assets/svg-assets.component';
@@ -25,6 +27,8 @@ import {AppComponent} from './app.component';
     SectionContactComponent,
     SectionAboutComponent,
     SectionHeroComponent,
+    SectionPastWorkComponent,
+    SectionStatsComponent,
     SvgAssetsComponent
   ],
   imports: [
