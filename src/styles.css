@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Critical CSS here to save
+html, body, header, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, .8);
+  font: 300 15px / 1.6 'Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+.crtical-html section {
+  padding: 20px;
+}
+.crtical-html section h2 {
+  color: #2ab6d4;
+  font-size: 32px;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+}
+.crtical-html .hero {
+  padding: 90px 20px 20px;
+  background-color: #20242D;
+  text-align: center;
+}
+.crtical-html .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: $header-height;
+  background-color: #223c6e;
+  color: #fff;
+  transform: translateY(0);
+}
+.crtical-html .header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.crtical-html .logo-img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.crtical-html .logo-img img {
+  width: 100%;
+}
+.crtical-html .header h1 {
+  margin-bottom: 0;
+  padding: 20px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: Oswald;
+  line-height: 1;
+  display: none;
+}
+.crtical-html .avatar-frame {
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: rgba(86, 96, 115, 1);
+}
+.crtical-html .avatar {
+  width: 85%;
+  position: relative;
+  top: 12px;
+}
+.crtical-html .hero h1 {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, .8);
+  font-weight: 300;
+  font-size: 24px;
+}
+.crtical-html .hero h1 strong, span {
+  white-space: nowrap;
+}
+.crtical-html .hero h1 .strikethrough {
+  text-decoration: line-through;
+}
+@media screen and (min-width: 768px) {
+  html, body, header, h1, h2, p {
+    font-size: 17px;
+  }
+  .crtical-html .logo-img {
+    margin: 0 10px 0 0;
+  }
+  .crtical-html .hero {
+    padding: 130px 60px 60px;
+  }
+  .crtical-html .header {
+    height: 70px;
+  }
+  .crtical-html .header h1 {
+    display: inline-block;
+  }
+  .crtical-html .avatar-frame {
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+  }
+  .crtical-html .avatar-frame .avatar {
+    top: 20px;
+  }
+  .crtical-html .hero h1 {
+    font-size: 32px;
+  }
+}
+*/

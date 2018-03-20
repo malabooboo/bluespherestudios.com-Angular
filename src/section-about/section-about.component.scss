@@ -48,12 +48,30 @@ p.intro {
   font-size: 22px;
   line-height: 1.2;
 
-  @include element-appear-resting;
-  :host.in-view & {
-    @include element-appear-in(.3s);
-  }
-
   @include tablet {
     font-size: 32px;
   }
+}
+
+@mixin staggered-in-view-transition {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      @include element-appear-resting;
+      :host.in-view & {
+        @include element-appear-in(#{$i * .2}s);
+      }
+    }
+  }
+}
+
+p {
+  @include staggered-in-view-transition;
+}
+
+// Stealth link
+
+a[target="_blank"] {
+  padding: 0;
+  background: none;
+  text-decoration: none;
 }

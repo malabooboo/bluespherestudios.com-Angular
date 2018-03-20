@@ -1,8 +1,15 @@
+@import '../scss/vars';
+@import '../scss/mixins';
+
 :host {
   display: block;
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  margin: 5px;
+
+  @include tablet {
+    margin: 0 10px 0 0;
+  }
 }
 
 img {

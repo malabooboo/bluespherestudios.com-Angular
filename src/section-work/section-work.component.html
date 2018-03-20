@@ -1,13 +1,14 @@
 <div class="site-width work-container">
   <h2>Work</h2>
   <div class="work-google">
-    <p class="intro">As part of Google's Cloud and Brand Studio teams over the last {{tenure}} years, I have worked on many different projects at their London and Mountain View offices.</p>
+    <p class="intro">Over the last {{tenure}} years as part of Google's Cloud and Brand Studio teams in London and Mountain View,
+      I have contributed to many different projects, including...</p>
     <div class="carousel-content">
       <ul class="recent-work">
         <li><a (click)="setWork('google-earth')" [ngClass]="{'active': currentWork == 'google-earth'}">Google Earth</a></li>
         <li><a (click)="setWork('qibla-finder')" [ngClass]="{'active': currentWork == 'qibla-finder'}">Qibla Finder</a></li>
         <li><a (click)="setWork('petra')" [ngClass]="{'active': currentWork == 'petra'}">Petra <span class="mobile-hide">Treks / Petra VR</span></a></li>
-        <li><a (click)="setWork('google-inbox')" [ngClass]="{'active': currentWork == 'google-inbox'}">Google Inbox</a></li>
+        <li><a (click)="setWork('google-inbox')" [ngClass]="{'active': currentWork == 'google-inbox'}"><span class="mobile-hide">Google</span> Inbox</a></li>
       </ul>
       <div class="carousel">
         <work-carousel [hidden]="currentWork != 'google-earth'" [@fadeAnimation]></work-carousel>
