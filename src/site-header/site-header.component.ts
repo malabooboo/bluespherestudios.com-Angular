@@ -7,8 +7,7 @@ import {
   OnInit
 } from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
-import {Observable} from 'rxjs/Observable';
-import {Subscription} from 'rxjs/Subscription';
+import {Observable, Subscription} from 'rxjs';
 
 import {SectionService} from '@services/section.service';
 

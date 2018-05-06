@@ -6,9 +6,8 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Subscription} from 'rxjs/Subscription';
-import 'rxjs/add/observable/timer';
+import {Observable, Subscription, timer} from 'rxjs';
+// import {timer} from 'rxjs/add/observable/timer';
 
 import {SectionService} from '@services/section.service';
 
@@ -77,8 +76,8 @@ export class AppComponent implements OnInit {
 
       // Set contact in view as well, since it's so near the bottom,
       // it never reaches the adjustedPosition
-      const timer = Observable.timer(500);
-      const sub = timer.subscribe(() => this.isContactInView = 'seen');
+      const contactTimer = timer(500);
+      const sub = contactTimer.subscribe(() => (this.isContactInView = 'seen'));
     }
   }
 
