@@ -1,6 +1,10 @@
 <div class="carousel__slides">
   <figure class="carousel__slide slide-1" [ngClass]="{'active': getCurrentSlide() == 1}">
-    <img src="/assets/images/google-inbox.jpg" alt="Google Inbox homepage">
+    <picture>
+      <source srcset="/assets/images/google-inbox.webp" type="image/webp">
+      <source srcset="/assets/images/google-inbox.jpg" type="image/jpeg">
+      <img src="/assets/images/google-inbox.jpg" alt="Google Inbox homepage">
+    </picture>
     <figcaption>
       I worked with an agency partner to launch the Inbox marketing site.
       <a href="https://www.google.com/inbox">Visit the site</a>

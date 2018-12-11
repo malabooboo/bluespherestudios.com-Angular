@@ -1,16 +1,28 @@
 <div class="carousel__slides">
   <figure class="carousel__slide slide-1" [ngClass]="{'active': getCurrentSlide() == 1}">
+  <picture>
+    <source srcset="/assets/images/google-qibla-finder-01.webp" type="image/webp">
+    <source srcset="/assets/images/google-qibla-finder-01.jpg" type="image/jpeg">
     <img src="/assets/images/google-qibla-finder-01.jpg" alt="Qibla Finder homepage">
+  </picture>
   <figcaption>Qibla Finder was Google's Ramadan site for 2017, a complex web app which uses the user's location and compass to show them
     the direction to Mecca, and 3D elements to provide an immersive experience.
     <a href="https://qiblafinder.withgoogle.com" target="_blank" rel="noopener">See the site</a></figcaption>
   </figure>
   <figure class="carousel__slide slide-2" [ngClass]="{'active': getCurrentSlide() == 2}">
+  <picture>
+    <source srcset="/assets/images/google-qibla-finder-03.webp" type="image/webp">
+    <source srcset="/assets/images/google-qibla-finder-03.jpg" type="image/jpeg">
     <img src="/assets/images/google-qibla-finder-03.jpg" alt="Qibla Finder">
+  </picture>
     <figcaption>Tech used on the site included Angular, Three.js, geolocation, and Web Navigator APIs.</figcaption>
   </figure>
   <figure class="carousel__slide slide-3" [ngClass]="{'active': getCurrentSlide() == 3}">
+  <picture>
+    <source srcset="/assets/images/google-qibla-finder-02.webp" type="image/webp">
+    <source srcset="/assets/images/google-qibla-finder-02.jpg" type="image/jpeg">
     <img src="/assets/images/google-qibla-finder-02.jpg" alt="Qibla Finder">
+  </picture>
     <figcaption>Qibla Finder was well-received and has been kept live after Ramadan 2017 and actively developed since then.</figcaption>
   </figure>
 </div>
