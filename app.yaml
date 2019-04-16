@@ -5,9 +5,11 @@ skip_files:
 - ^(?!dist)  # Skip any files not in the dist folder
 
 handlers:
-- url: /(.*\.(gif|png|jpeg|jpg|css|js|ico|svg|svgz|webp|json))$
+- url: /(.*\.(gif|png|jpeg|jpg|css|js|ico|svg|svgz|webp|json|xml|m4a))$
   static_files: dist/\1
   upload: dist/(.*)
+  secure: always
 - url: /(.*)
   static_files: dist/index.html
   upload: dist/index.html
+  secure: always
