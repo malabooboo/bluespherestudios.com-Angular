@@ -35,8 +35,9 @@
 
   .image__image {
     width: 100%;
+    display: block;
     border: 1px solid rgba($color-black, .2);
-    box-shadow: 0 0 20px -10px $color-black;
+    box-shadow: 0 0 20px -10px $color-gray;
 
     source,
     img {
@@ -138,10 +139,10 @@
   grid-column: 1 / span 3;
 
   @include large-mobile {
-    margin-bottom: 60px;
-    padding-bottom: 20px;
+    // margin-bottom: 60px;
+    // padding-bottom: 20px;
     border-bottom: 1px solid rgba($color-black, .1);
-    box-shadow: 0 4px 40px -10px $color-black;
+    // box-shadow: 0 4px 40px -10px $color-black;
     grid-column: 2 / span 2;
   }
 }

@@ -1,0 +1,24 @@
+<div class="carousel__slides">
+  <figure class="carousel__slide slide-1" [ngClass]="{'active': getCurrentSlide() == 1}">
+    <picture>
+      <source srcset="/assets/images/google-cloud-blog-01.webp" type="image/webp">
+      <source srcset="/assets/images/google-cloud-blog-01.jpg" type="image/jpeg">
+      <img src="/assets/images/google-cloud-blog-01.jpg" alt="Google Cloud Blog">
+    </picture>
+    <figcaption>Google Cloud launched it's own blog, which consolidated many of the different Cloud-related blogs around the web
+      provided a single place for Cloud's announcements and articles.
+    </figcaption>
+  </figure>
+</div>
+<nav class="carousel__controls">
+  <div class="carousel__controls--previous" (click)="setPreviousSlide()" [ngClass]="{'hidden': getCurrentSlide() == 1}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use>
+    </svg>
+  </div>
+  <div class="carousel__controls--next" (click)="setNextSlide()" [ngClass]="{'hidden': getCurrentSlide() == getLastSlide()}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+    </svg>
+  </div>
+</nav>

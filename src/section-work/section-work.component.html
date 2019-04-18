@@ -7,12 +7,14 @@
       <ul class="recent-work">
         <li><a (click)="setWork('google-earth')" [ngClass]="{'active': currentWork == 'google-earth'}">Google Earth</a></li>
         <li><a (click)="setWork('qibla-finder')" [ngClass]="{'active': currentWork == 'qibla-finder'}">Qibla Finder</a></li>
+        <li><a (click)="setWork('cloud-blog')" [ngClass]="{'active': currentWork == 'cloud-blog'}">Google Cloud Blog</a></li>
         <li><a (click)="setWork('petra')" [ngClass]="{'active': currentWork == 'petra'}">Petra <span class="mobile-hide">Treks / Petra VR</span></a></li>
         <li><a (click)="setWork('google-inbox')" [ngClass]="{'active': currentWork == 'google-inbox'}"><span class="mobile-hide">Google</span> Inbox</a></li>
       </ul>
       <div class="carousel">
         <work-carousel [hidden]="currentWork != 'google-earth'" [@fadeAnimation]></work-carousel>
         <work-carousel-qibla-finder [hidden]="currentWork != 'qibla-finder'" [@fadeAnimation]></work-carousel-qibla-finder>
+        <work-carousel-cloud-blog [hidden]="currentWork != 'cloud-blog'" [@fadeAnimation]></work-carousel-cloud-blog>
         <work-carousel-petra [hidden]="currentWork != 'petra'" [@fadeAnimation]></work-carousel-petra>
         <work-carousel-inbox [hidden]="currentWork != 'google-inbox'" [@fadeAnimation]></work-carousel-inbox>
       </div>

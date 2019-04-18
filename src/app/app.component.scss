@@ -90,3 +90,8 @@ section {
   background-color: $color-gray;
   @include slanty-thing;
 }
+
+// Temporary, find an alternative way to do this
+#past-work {
+  overflow: -webkit-paged-y;
+}
