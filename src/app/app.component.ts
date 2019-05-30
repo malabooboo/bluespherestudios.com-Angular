@@ -24,12 +24,12 @@ const VISUAL_OFFSET = 120;
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
-  @ViewChild('homeSection') homeSection: ElementRef;
-  @ViewChild('workSection') workSection: ElementRef;
-  @ViewChild('pastWorkSection') pastWorkSection: ElementRef;
-  @ViewChild('statsSection') statsSection: ElementRef;
-  @ViewChild('aboutSection') aboutSection: ElementRef;
-  @ViewChild('contactSection') contactSection: ElementRef;
+  @ViewChild('homeSection', {static: false}) homeSection: ElementRef;
+  @ViewChild('workSection', {static: false}) workSection: ElementRef;
+  @ViewChild('pastWorkSection', {static: false}) pastWorkSection: ElementRef;
+  @ViewChild('statsSection', {static: false}) statsSection: ElementRef;
+  @ViewChild('aboutSection', {static: false}) aboutSection: ElementRef;
+  @ViewChild('contactSection', {static: false}) contactSection: ElementRef;
   isPastWorkInView: string;
   isStatsInView: string;
   isAboutInView: string;
