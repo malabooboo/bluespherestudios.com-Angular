@@ -33,6 +33,10 @@
   top: 50%;
   width: 100%;
 
+  @include tablet {
+    top: 42%;
+  }
+
   &--previous,
   &--next {
     position: absolute;
