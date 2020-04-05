@@ -1,16 +1,16 @@
 import {Component, ElementRef, Input} from '@angular/core';
 
 /**
- * Work carousel component for Google Earth.
+ * Work carousel component for Google Stadia.
  */
 @Component({
-  selector: 'work-carousel-google-earth',
-  templateUrl: './work-carousel-earth.component.html',
+  selector: 'work-carousel-google-stadia',
+  templateUrl: './work-carousel-stadia.component.html',
   styleUrls: ['./work-carousel.component.scss']
 })
-export class WorkCarouselEarthComponent {
+export class WorkCarouselStadiaComponent {
   currentSlide = 1;
-  totalSlides = 4;
+  totalSlides = 1;
 
   getCurrentSlide() {
     return this.currentSlide;

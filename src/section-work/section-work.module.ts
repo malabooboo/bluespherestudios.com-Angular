@@ -6,7 +6,8 @@ import {WorkCarouselInboxComponent} from './work-carousel-inbox.component';
 import {WorkCarouselPetraComponent} from './work-carousel-petra.component';
 import {WorkCarouselQiblaFinderComponent} from './work-carousel-qibla-finder.component';
 import {WorkCarouselEarthComponent} from './work-carousel-earth.component';
-import { WorkCarouselCloudBlogComponent } from './work-carousel-cloud-blog.component';
+import {WorkCarouselCloudBlogComponent} from './work-carousel-cloud-blog.component';
+import {WorkCarouselStadiaComponent} from './work-carousel-stadia.component';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,10 @@ import { WorkCarouselCloudBlogComponent } from './work-carousel-cloud-blog.compo
     WorkCarouselQiblaFinderComponent,
     WorkCarouselPetraComponent,
     WorkCarouselInboxComponent,
-    WorkCarouselCloudBlogComponent
+    WorkCarouselCloudBlogComponent,
+    WorkCarouselStadiaComponent,
   ],
   imports: [BrowserModule],
-  exports: [SectionWorkComponent]
+  exports: [SectionWorkComponent],
 })
 export class SectionWorkModule {}
