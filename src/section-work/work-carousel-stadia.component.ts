@@ -10,7 +10,7 @@ import {Component, ElementRef, Input} from '@angular/core';
 })
 export class WorkCarouselStadiaComponent {
   currentSlide = 1;
-  totalSlides = 1;
+  totalSlides = 2;
 
   getCurrentSlide() {
     return this.currentSlide;
